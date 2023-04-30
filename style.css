@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+:root {
+  /* COLORS */
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+  --clr-dark-gray: hsl(0, 0%, 63%);
+  --clr-darker-gray: hsl(0, 0%, 27%);
+
+  /* FONTS  */
+  --font-family: 'League Spartan', sans-serif;
+  --semi-bold: 500;
+  --bold: 600;
+  --extra-bold: 700;
+  --h1-size: 48px;
+  --h1-spacing: -2px;
+  --h2-size: 16px;
+  --h2-spacing: 6.67px;
+  --h2-line: 22px;
+  --p-size: 16px;
+  --p-line: 22px;
+  --shop-now-spacing: 12.5px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+body {
+  background-color: rgb(225, 225, 225);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  color: var(--clr-black);
+  font-weight: var(--extra-bold);
+  max-width: 400px;
+  letter-spacing: var(--h1-spacing);
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  color: var(--clr-black);
+  font-weight: var(--extra-bold);
+  line-height: var(--h2-line);
+  letter-spacing: var(--h2-spacing);
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+p {
+  color: var(--clr-dark-gray);
+  font-size: var(--p-size);
+  line-height: var(--p-line);
+  font-weight: var(--semi-bold);
+}
+
+.page {
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-color: var(--clr-white);
+}
+
+/* HEADER */
+.header-positionner {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 6rem;
+  left: 4rem;
+}
+
+.navbar {
+  display: flex;
+  margin-left: 3rem;
+}
+
+.navbar a {
+  color: var(--clr-white);
+  font-weight: var(--semi-bold);
+  font-size: var(--p-size);
+  padding: 0.3rem 1rem;
+  position: relative;
+}
+
+.navbar a::after {
+  content: '';
+  width: 16px;
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  background-color: var(--clr-white);
+}
+
+.navbar a:hover::after {
+  opacity: 1;
+}
+
+/* MAIN SLIDER */
+.slider {
+  display: flex;
+  align-items: center;
+}
+
+.slider-text {
+  padding: 0 5.5rem;
+  min-height: 534px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.slider-link {
+  font-size: var(--p-size);
+  color: var(--clr-black);
+  font-weight: var(--bold);
+  letter-spacing: var(--shop-now-spacing);
+  text-transform: uppercase;
+  display: flex;
+  align-items: baseline;
+  margin-top: 1.5rem;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.slider-link:hover {
+  opacity: 0.6;
+}
+
+.slider-link img {
+  margin-left: 1.2rem;
+}
+
+.slider-btns {
+  background-color: var(--clr-black);
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.btn {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#previous {
+  background-image: url('./images/icon-angle-left.svg');
+}
+
+#next {
+  background-image: url('./images/icon-angle-right.svg');
+}
+
+.btn:hover {
+  background-color: var(--clr-darker-gray);
+}
+
+/* MAIN ABOUT */
+.about {
+  display: flex;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 2.3rem;
+}
