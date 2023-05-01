@@ -1,3 +1,4 @@
+// SLIDER
 const btns = document.querySelector('.slider-btns');
 let index = 0;
 const content = [
@@ -26,7 +27,6 @@ btns.addEventListener('click', (e) => {
   const img = document.getElementById('slider-img');
   const title = document.querySelector('.title');
   const text = document.querySelector('.text');
-  console.log(img.src);
   if (btn === 'previous') {
     updateContent(img, title, text, -1);
   }
@@ -54,3 +54,4 @@ const updateContent = (image, title, text, int) => {
   title.textContent = content[index].title;
   text.textContent = content[index].txt;
 };
+

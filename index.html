@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <script src="./app.js" defer></script>
+    <script src="./menu.js" defer></script>
     <title>Room</title>
   </head>
   <body>
-    <div class="page">
+    
       <!-- HEADER - LOGO - NAVBAR  362px width-->
+      <div class="filter"></div>
       <header>
         <div class="header-positionner">
+          <img src="./images/icon-hamburger.svg" alt="open menu" class="burger">
+          <img src="./images/icon-close.svg" alt="close menu" class="close">
           <object data="./images/logo.svg" class="logo"></object>
           <nav>
             <ul class="navbar">
@@ -27,7 +31,7 @@
       <main>
         <!-- SLIDER - text - image - buttons -->
         <section class="slider">
-          <img src="./images/desktop-image-hero-1.jpg" alt="product 1" id="slider-img"/>
+          <img src="./images/desktop-image-hero-1.jpg" alt="product 1" id="slider-img" />
           <div class="slider-text">
             <h1 class="title">Discover innovative ways to decorate</h1>
             <p class="text">
@@ -42,7 +46,7 @@
 
             <div class="slider-btns">
               <div class="btn" id="previous"></div>
-              <div class="btn" id="next" ></div>
+              <div class="btn" id="next"></div>
             </div>
           </div>
         </section>
@@ -63,5 +67,4 @@
         </section>
       </main>
     </div>
-  </body>
 </html>
